@@ -4,7 +4,7 @@ from pydantic import BaseModel, PositiveFloat
 
 class TransactionType(Enum):
     DEPOSIT = 'deposit'
-    WITHDRAW = 'withdraw'
+    WITHDRAWAL = 'withdrawal'
 
 
 class TransactionIn(BaseModel):
