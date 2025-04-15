@@ -1,4 +1,3 @@
-
 from databases.interfaces import Record
 
 from src.database import database

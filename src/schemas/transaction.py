@@ -1,10 +1,11 @@
 from enum import Enum
+
 from pydantic import BaseModel, PositiveFloat
 
 
 class TransactionType(Enum):
-    DEPOSIT = 'deposit'
-    WITHDRAWAL = 'withdrawal'
+    DEPOSIT = "deposit"
+    WITHDRAWAL = "withdrawal"
 
 
 class TransactionIn(BaseModel):

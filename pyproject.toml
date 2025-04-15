@@ -1,21 +1,23 @@
-[project]
-name = "dio-bank-fastapi"
+[tool.poetry]
+name = "dio-blog"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Ludwig S",email = "silvaludwig@outlook.com"}
-]
+authors = ["Guilherme Carvalho <gui.ifsp11@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "fastapi",
-    "jwt",
-    "pydantic-settings",
-    "databases[aiosqlite] (>=0.9.0,<0.10.0)",
-    "uvicorn[standard] (>=0.34.1,<0.35.0)"
-]
 
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "*"
+uvicorn = { extras = ["standard"], version = "*" }
+databases = { version = "*", extras = ["aiosqlite", "asyncpg"] }
+pyjwt = "*"
+psycopg2-binary = "*"
+pydantic-settings = "*"
+alembic = "*"
+
+[tool.ruff]
+line-length = 120
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

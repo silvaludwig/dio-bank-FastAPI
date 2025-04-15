@@ -5,9 +5,9 @@ from src.security import login_required
 from src.services.transaction import TransactionService
 from src.views.transaction import TransactionOut
 
-
 router = APIRouter(prefix="/transactions", dependencies=[Depends(login_required)])
-service = TransactionService
+
+service = TransactionService()
 
 
 @router.post("/", status_code=status.HTTP_201_CREATED, response_model=TransactionOut)
